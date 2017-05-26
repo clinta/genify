@@ -4,7 +4,9 @@ comments.
 
 ## QuickStart
 
-```go src.gen
+src.gen:
+
+```go
 //genify:generic=foo,bar
 
 func (g *Generic) GetThing() {
