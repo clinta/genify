@@ -86,7 +86,11 @@ func uncapitalize(s string) string {
 }
 
 func processLines(lb []string, repl map[string][]string, outWriter io.Writer) {
-	ls := strings.Join(lb, "\n") + "\n"
+	ls := strings.Trim(strings.Join(lb, "\n"), "\n")
+	if len(ls) == 0 {
+		return
+	}
+	ls = ls + "\n\n"
 	var m bool
 	for sw, rws := range repl {
 		if !strings.Contains(ls, capitalize(sw)) && !strings.Contains(ls, uncapitalize(sw)) {
