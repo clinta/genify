@@ -4,9 +4,7 @@ comments.
 
 ## QuickStart
 
-src.gen:
-
-```go
+```go src.gen
 //genify:generic=foo,bar
 
 func (g *Generic) GetThing() {
@@ -57,4 +55,4 @@ template.
 
 * Genify operates on unexported and exported types of the same name. If you
 setup a replacement of `//genify:generic=foo,bar` all instances of `Generic`
-will also be replaced with `Foo`.
+will also be replaced with `Foo` and `Bar`.
